@@ -1,0 +1,99 @@
+:root{
+    --colorGlobal: #1F2732;
+    --colorSection: #313B47;
+    --colorWhite: #FFFFFF;
+    --greenNeon: #53FFAB;
+    --balckLight: #697381;
+    --styleText: 'Lato', sans-serif;
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: var(--colorGlobal);
+    width: 100%;
+    height: 100vh;
+    font-family: var(--styleText);
+    & .sectionDate{
+        background-color: var(--colorSection);
+        width: 35vw;
+        height: 30vh;
+        border-radius: 10px;
+        color: var(--colorWhite);
+        flex-direction: column;
+        & .numberDate{
+            color: var(--greenNeon);
+            height: 3vh;
+            margin-bottom: 10px;
+        }
+        & .textDateApi{
+            width: 30vw;
+            height: 12vh;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+        & .reproductor{
+            margin-top: 15px;
+        }
+        & .bton{
+            & button{
+                background-color: var(--greenNeon);
+                width: 3vw;
+                height: 6vh;
+                border-radius: 100%;
+                border: none;
+                position: absolute;
+                top: 62%;
+                left: 48.5%;
+            }
+            button:hover{
+                box-shadow: 0px 0px 10px 0px var(--greenNeon);
+                border: none;
+            }
+        }
+    }
+    @media (max-width: 600px) {
+        .sectionDate{
+            width: 90vw;
+            height: 50vh;
+            & .textDateApi{
+                width: 80vw;
+                height: 20vh;
+                text-align: center;
+                font-size: 1.5rem;
+            }
+            & .reproductor{
+                margin-top: 15px;
+                & img{
+                    max-width: 70vw;
+                }
+            }
+            & .bton{
+                & button{
+                    background-color: var(--greenNeon);
+                    width: 10vw;
+                    height: 6vh;
+                    border-radius: 100%;
+                    border: none;
+                    position: absolute;
+                    top: 66%;
+                    left: 45%;
+                    margin: auto;
+                }
+                button:hover{
+                    box-shadow: 0px 0px 10px 0px var(--greenNeon);
+                    border: none;
+                }
+            }
+        }
+    }
+}
+.flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+span{
+    color: var(--balckLight);
+}
